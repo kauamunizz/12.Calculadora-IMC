@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora IMC</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div class="bloco">
+                    <div class="calculadora">
+                        <form action="">
+                            <div class="input-group">
+                                <div class="input-box" id="sexo">
+                                    <label for="sexo">Sexo:</label>
+                                    <input id="homem" type="button" value="Homem">
+                                    <input id="mulher" type="button" value="Mulher">
+                                </div>
+                                <div class="input-box">
+                                    <label for="idade">Idade:</label>
+                                    <input id="idade" type="text" placeholder="Ex: 35"> anos
+                                </div>
+                                <div class="input-box">
+                                    <label for="altura">Altura:</label>
+                                    <input id="altura" type="text" placeholder="Ex: 165"> cm
+                                </div>
+                                <div class="input-box">
+                                    <label for="peso">Peso:</label>
+                                    <input id="peso" type="text" placeholder="Ex: 62"> kg
+                                </div>
+                                <div class="calcular">
+                                    <input type="button" value="Calcular" id="calcular" name="calcular">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="bloco">
+                    <div class="tabela">
+                        <div id="tabela" class="flex hide">
+                            <h3>Resultado:</h3>
+                            <p>Seu IMC é de <span class="imc">00</span>kg/m²</p>
+                        </div>
+                        <table>
+                            <tr>
+                                <th>IMC (kg/m²)</th>
+                                <th>Classificação</th>
+                            </tr>
+                            <tr id="menor">
+                                <td>Menor que 18,5</td>
+                                <td>Magreza</td>
+                            </tr>
+                            <tr id="normal">
+                                <td><strong>18,5 a 24,9</strong></td>
+                                <td>Normal</td>
+                            </tr>
+                            <tr id="sobrepeso">
+                                <td><strong>25 a 29,9</strong></td>
+                                <td>Sobrepeso</td>
+                            </tr>
+                            <tr id="obesidade">
+                                <td><strong>30 a 34,9</strong></td>
+                                <td>Obesidade grau I</td>
+                            </tr>
+                            <tr id="obesidade-dois">
+                                <td><strong>35 a 39,9</strong></td>
+                                <td>Obesidade grau II</td>
+                            </tr>
+                            <tr id="obesidade-tres">
+                                <td><strong>Maior que 40</strong></td>
+                                <td>Obesidade grau III</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

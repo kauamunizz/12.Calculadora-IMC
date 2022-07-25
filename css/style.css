@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+}
+
+.bloco {
+    width: 426px;
+    height: 500px;
+    border: 1px solid #e0ffff;
+    border-radius: 10px;
+    margin: 0 50px;
+    padding: 3rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 0 0 rgb(64 176 220 / 20%);
+}
+
+#sexo input:hover {
+    background-color: #eaf9ff;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+.input-box input[type=text] {
+    width: 60%;
+}
+
+.input-box input {
+    background-color: #fff;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border: 1px solid #e0ffff;
+    border-radius: 5px;
+}
+
+.input-group .calcular {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-group .calcular input{
+    width: 50%;
+    height: 40px;
+    background-color: #eaf9ff;
+    border: #e0ffff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.tabela {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.bloco .tabela table th {
+    background-color: #eaf9ff;
+    text-align: left;
+}
+
+.bloco .tabela table tr td {
+    font-weight: bold;
+    font-size: .9em;
+}
+
+.bloco .tabela table td, th {
+    border: 0;
+    padding: 20px 15px;
+    border-bottom: solid 1px #eee;
+}
