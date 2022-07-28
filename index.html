@@ -8,76 +8,87 @@
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
-        <main>
-            <div class="container">
-                <div class="bloco">
-                    <div class="calculadora">
-                        <form action="">
-                            <div class="input-group">
-                                <div class="input-box" id="sexo">
-                                    <label for="sexo">Sexo:</label>
-                                    <input id="homem" type="button" value="Homem">
-                                    <input id="mulher" type="button" value="Mulher">
+        <div class="container">
+            <div class="bloco">
+                <form action="" name="imc">
+                    <div class="input-group">
+                        <div class="radio-group">
+                            <div class="label">Sexo:</div>
+
+                            <div class="options">
+                                <div class="radio-box">
+                                    <input id="mulher" name="sexo" type="radio" value="mulher" checked required>
+                                    <label for="mulher">Mulher</label>
                                 </div>
-                                <div class="input-box">
-                                    <label for="idade">Idade:</label>
-                                    <input id="idade" type="text" placeholder="Ex: 35"> anos
-                                </div>
-                                <div class="input-box">
-                                    <label for="altura">Altura:</label>
-                                    <input id="altura" type="text" placeholder="Ex: 165"> cm
-                                </div>
-                                <div class="input-box">
-                                    <label for="peso">Peso:</label>
-                                    <input id="peso" type="text" placeholder="Ex: 62"> kg
-                                </div>
-                                <div class="calcular">
-                                    <input type="button" value="Calcular" id="calcular" name="calcular">
+
+                                <div class="radio-box">
+                                    <input id="homem" name="sexo" type="radio" value="homem" required>
+                                    <label for="homem">Homem</label>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="bloco">
-                    <div class="tabela">
-                        <div id="tabela" class="flex hide">
-                            <h3>Resultado:</h3>
-                            <p>Seu IMC é de <span class="imc">00</span>kg/m²</p>
                         </div>
-                        <table>
-                            <tr>
-                                <th>IMC (kg/m²)</th>
-                                <th>Classificação</th>
-                            </tr>
-                            <tr id="menor">
-                                <td>Menor que 18,5</td>
-                                <td>Magreza</td>
-                            </tr>
-                            <tr id="normal">
-                                <td>18,5 a 24,9</td>
-                                <td>Normal</td>
-                            </tr>
-                            <tr id="sobrepeso">
-                                <td>25 a 29,9</td>
-                                <td>Sobrepeso</td>
-                            </tr>
-                            <tr id="obesidade">
-                                <td>30 a 34,9</td>
-                                <td>Obesidade grau I</td>
-                            </tr>
-                            <tr id="obesidade-dois">
-                                <td>35 a 39,9</td>
-                                <td>Obesidade grau II</td>
-                            </tr>
-                            <tr id="obesidade-tres">
-                                <td>Maior que 40</td>
-                                <td>Obesidade grau III</td>
-                            </tr>
-                        </table>
+
+                        <div class="input-box">
+                            <label for="idade" class="label">Idade:</label>
+                            <input id="idade" name="idade" type="number" min="0" max="120" placeholder="Ex: 35" required>
+                            <span>anos</span>
+                        </div>
+                        <div class="input-box">
+                            <label for="altura" class="label">Altura:</label>
+                            <input id="altura" name="altura" min="0" step="1" type="number" placeholder="Ex: 165" required>
+                            <span>cm</span>
+                        </div>
+                        <div class="input-box">
+                            <label for="peso" class="label">Peso:</label>
+                            <input id="peso" name="peso" min="0" type="number" placeholder="Ex: 62" required>
+                            <span>kg</span>
+                        </div>
+                        <div class="calcular">
+                            <input type="button" value="Calcular" id="calcular" name="calcular">
+                        </div>
                     </div>
+                </form>
+            </div>
+
+            <div class="bloco">
+                <div class="tabela">
+                    <div id="tabela" class="flex hide">
+                        <h3>Resultado:</h3>
+                        <p>Seu IMC é de <strong class="imc"></strong></p>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>IMC (kg/m²)</th>
+                            <th>Classificação</th>
+                        </tr>
+                        <tr id="menor">
+                            <td>Menor que 18,5</td>
+                            <td>Magreza</td>
+                        </tr>
+                        <tr id="normal">
+                            <td>18,5 a 24,9</td>
+                            <td>Normal</td>
+                        </tr>
+                        <tr id="sobrepeso">
+                            <td>25 a 29,9</td>
+                            <td>Sobrepeso</td>
+                        </tr>
+                        <tr id="obesidade">
+                            <td>30 a 34,9</td>
+                            <td>Obesidade grau I</td>
+                        </tr>
+                        <tr id="obesidade-dois">
+                            <td>35 a 39,9</td>
+                            <td>Obesidade grau II</td>
+                        </tr>
+                        <tr id="obesidade-tres">
+                            <td>Maior que 40</td>
+                            <td>Obesidade grau III</td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-        </main>
+        </div>
 
 
         <script src="./js/script.js"></script>

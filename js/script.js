@@ -1,23 +1,21 @@
-// IMC = Peso ÷ (Altura × Altura)
+document.querySelector('#calcular').addEventListener('click', retornarValor);
 
-const sexo = document.querySelector('#sexo')
-const altura = document.querySelector('#altura');
-const peso = document.querySelector('#peso');
-const calcular = document.querySelector('#calcular');
+function retornarValor() {
+    const { altura, peso } = document.forms.imc;
+    const valorIMC = document.querySelector('.imc');
+    const imc = (peso.value / (altura.value * altura.value)) * 10000;
 
-calcular.addEventListener('click', retornarValor);
+    valorIMC.innerHTML = imc.toFixed(1);
 
-function retornarValor () {
-    let valorIMC = document.querySelector('.imc');
-    let imc = (Math.round(peso.value / (altura.value /100 * altura.value /100)));
+    document.querySelector('#tabela').classList.remove('hide');
+    document.querySelector(getTarget(imc)).classList.add('selected');
+}
 
-    valorIMC.innerHTML = imc;
-    document.querySelector('#tabela').classList.remove('hide')
-    
-    // if (imc < 18,5) document.querySelector('#menor').style.backgroundColor = '#DC143C';
-    // else if (imc >= 18,5 || imc < 24,9) document.querySelector('#normal').style.backgroundColor = '#8FBC8F';
-    // if (imc >= 25 || imc < 29,9) document.querySelector('#sobrepeso').style.backgroundColor = '#FAFAD2';
-    // if (imc >= 30 || imc < 34,9) document.querySelector('#obesidade').style.backgroundColor = '#DC143C';
-    // if (imc >= 35 || imc < 35,9) document.querySelector('#obesidade-dois').style.backgroundColor = '#DC143C';
-    // if (imc > 40) document.querySelector('#obesidade-tres').style.backgroundColor = '#DC143C';
+function getTarget(imc) {
+    if (imc < 18.5) return '#menor';
+    else if (imc >= 18.5 && imc < 25) return '#normal';
+    else if (imc >= 25 && imc < 30) return '#sobrepeso';
+    else if (imc >= 30 && imc < 35) return '#obesidade';
+    else if (imc >= 35 && imc < 40) return '#obesidade-dois';
+    else return '#obesidade-tres';
 }
