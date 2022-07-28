@@ -5,7 +5,7 @@ function retornarValor() {
     const valorIMC = document.querySelector('.imc');
     const imc = (peso.value / (altura.value * altura.value)) * 10000;
 
-    valorIMC.innerHTML = imc.toFixed(1);
+    valorIMC.innerText = imc.toFixed(1);
 
     document.querySelector('#tabela').classList.remove('hide');
     document.querySelector(getTarget(imc)).classList.add('selected');
